@@ -1,0 +1,57 @@
+<!-- bootstrap responsive divs -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Common Container</p>
+    </div>
+    <div class="col-sm-4">
+      <p>Common Container</p>
+    </div>
+    <div class="col-sm-4">
+      <p>Common Container</p>
+    </div>
+  </div>
+  
+  <!-- ng-content is used to load the content dynamically -->
+  <div class="row">
+      <div class="col-sm-4">
+        <div>
+          <app-data-sharing>
+            <ng-content select=".project-class"> </ng-content>
+          </app-data-sharing>
+        </div>
+      </div>
+    <div class="col-sm-4">
+        <app-data-sharing>
+            <ng-content select=".project-class"> </ng-content>
+          </app-data-sharing>
+    </div>
+    <div class="col-sm-4">
+        <app-data-sharing>
+            <ng-content select=".project-class"> </ng-content>
+          </app-data-sharing>
+    </div>
+  </div>
+
+  <!-- Datatable with pagination and sorting -->
+  <div class="row">
+    <div class="col-sm-12">
+        <p-table [columns]="headers" [value]="posts" [paginator]="true" [scrollable]="true" scrollHeight="400px" [rows]="10">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{col.header}}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns">
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+  </div>
+</div>

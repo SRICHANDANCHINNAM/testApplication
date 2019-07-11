@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+.p-t-0 {
+    padding-top : 0px !important;
+}
+.p-b-0 {
+    padding-bottom : 0px !important;
+}
+a.nav-link.active {
+    background: grey;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color : lightcyan !important;
+}
+a.nav-link {
+    font-weight: 600;
+}
+.p-l-0 {
+    padding-left : 0px !important; 
+} 
+
+.p-r-0 {
+    padding-right : 0px !important;
+}
+
+.m-t-20 {
+    margin-top : 20px !important;
+}
+.m-l-10 {
+    margin-left : 10px;
+}
